@@ -1,0 +1,16 @@
+dist
+public
+next-env.d.ts
+next.config.ts
+node_modules
+package.json
+package-lock.json
+/husky
+/.husky
+.cache
+.prettierignore
+.eslintignore
+.dockerignore
+.gitignore
+Dockerfile
+docker-compose.yml
