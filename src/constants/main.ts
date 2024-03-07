@@ -13,8 +13,6 @@ export const registerFormText = {
   lastname: 'نام خانوادگی',
   mobile: 'شماره موبایل',
   password: 'رمز عبور',
-  passwordHelper:
-    'رمز عبور باید شامل حداقل یک حروف بزرگ و یک حروف کوچک، و حداقل ۴ و حداکثر 10 کاراکتر باشد.',
 };
 
 const providerForm = {

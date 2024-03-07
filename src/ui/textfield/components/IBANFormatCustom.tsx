@@ -28,13 +28,13 @@ const IBANInputDef = ({ onChange, ...props }: IBANInputProps) => (
     onValueChange={(values, { event }) =>
       onChange(
         Object.assign({} as ChangeEvent<HTMLInputElement>, event, {
-          target: { name: props.name, value: values.value.toLocaleUpperCase() }
-        })
+          target: { name: props.name, value: values.value.toLocaleUpperCase() },
+        }),
       )
     }
     onKeyDown={(e) =>
       !/^(?:[a-z0-9]|Backspace|Delete|Home|End|ArrowLeft|ArrowRight|Shift|CapsLock|Control|NumLock|Tab|Paste|Redo|Undo)$/i.test(
-        e.key
+        e.key,
       ) && e.preventDefault()
     }
   />
@@ -42,8 +42,8 @@ const IBANInputDef = ({ onChange, ...props }: IBANInputProps) => (
 
 IBANInputDef.displayName = 'IBANInputDef';
 
-export const IBANFormatCustom = forwardRef<HTMLInputElement, IBANInputProps>((props, ref) => (
-  <IBANInputDef {...props} getInputRef={ref} />
-));
+export const IBANFormatCustom = forwardRef<HTMLInputElement, IBANInputProps>(
+  (props, ref) => <IBANInputDef {...props} getInputRef={ref} />,
+);
 
 IBANFormatCustom.displayName = 'IBANFormatCustom';

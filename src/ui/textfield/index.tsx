@@ -7,12 +7,13 @@ import cn from 'clsx';
 
 import HelperText from './components/HelperText';
 import NumericFormatCustom from './components/NumericFormatCustom';
-import { colorPalette } from '../../shared/colorPalette';
+import { colorPalette } from '@shared';
 
 import { IBANFormatCustom } from './components/IBANFormatCustom';
 import { textFieldStyles } from './textfiels.styles';
 
-export interface CustomTextFieldProps extends Omit<BaseTextFieldProps, 'error'> {
+export interface CustomTextFieldProps
+  extends Omit<BaseTextFieldProps, 'error'> {
   startAdornment?: string | ReactNode;
   endAdornment?: string | ReactNode;
   endAdornmentText?: string;
@@ -26,7 +27,7 @@ export interface CustomTextFieldProps extends Omit<BaseTextFieldProps, 'error'> 
     /* eslint-disable @typescript-eslint/no-explicit-any */
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | any,
     shouldClear?: boolean,
-    name?: string
+    name?: string,
   ) => void;
   isClearable?: boolean;
   isNumeric?: boolean;
@@ -77,7 +78,9 @@ export const TextField = ({
 }: any) => {
   const [textfieldValue, setTextfieldValue] = useState<string | any>('');
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const fieldValue = event.target.value;
     const persianRegex = /[\u0600-\u06FF]/;
 
@@ -110,7 +113,7 @@ export const TextField = ({
     <MuiTextField
       sx={{
         ...textFieldStyles,
-        ...sx
+        ...sx,
       }}
       dir={dir}
       // ref={ref}
@@ -120,7 +123,7 @@ export const TextField = ({
         rest?.type === 'number' ? 'number_input ' : '',
         className ? className : '',
         inputDir === 'ltr' ? 'ltr_input ' : '',
-        `${align}_align_input`
+        `${align}_align_input`,
       )}
       classes={{ root: !label ? 'withoutLabel' : '' }}
       fullWidth
@@ -132,13 +135,13 @@ export const TextField = ({
       value={textfieldValue}
       inputProps={{
         maxLength: characterLimit ? characterLimit : maxLength,
-        ...inputProps
+        ...inputProps,
       }}
       InputProps={{
         ...((rest?.type === 'number' &&
           thousandSeparator && {
             /* eslint-disable @typescript-eslint/no-explicit-any */
-            inputComponent: NumericFormatCustom as any
+            inputComponent: NumericFormatCustom as any,
           }) ||
           (IBANSeparator && { inputComponent: IBANFormatCustom })),
 
@@ -156,8 +159,8 @@ export const TextField = ({
                 color:
                   disabled === true
                     ? colorPalette.content_conditional_disable
-                    : colorPalette.content_main_secondary
-              }
+                    : colorPalette.content_main_secondary,
+              },
             }}
             position="end"
           >
@@ -173,11 +176,11 @@ export const TextField = ({
           </IconButton>
         ) : null,
         // ref: inputRef,
-        ...InputProps
+        ...InputProps,
       }}
       error={error ? true : false}
       FormHelperTextProps={{
-        component: 'div'
+        component: 'div',
       }}
       type={thousandSeparator || IBANSeparator ? 'text' : rest?.type}
       multiline={rest?.multiline}
