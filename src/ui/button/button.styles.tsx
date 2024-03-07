@@ -1,8 +1,9 @@
 import { colorPalette } from '@shared';
 
 export const buttonStyles = {
-  borderRadius: '8px',
+  borderRadius: '24px',
   gap: '8px',
+  width: 'max-content',
 
   '&.MuiButtonBase-root': {
     // Outline Buttons

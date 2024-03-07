@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Box from '@mui/material/Box';
 
-import { Typography } from '../../typography/typography';
+import { Typography } from '../../typography';
 import { colorPalette } from '@shared';
 
 interface HelperTextProps {
