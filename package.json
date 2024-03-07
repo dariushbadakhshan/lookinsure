@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^3.3.4",
     "@mui/material": "^5.15.12",
     "framer-motion": "^11.0.8",
+    "iconsax-react": "^0.0.8",
     "js-cookie": "^3.0.5",
     "next": "14.1.2",
     "react": "^18",
