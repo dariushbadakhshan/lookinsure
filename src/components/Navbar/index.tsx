@@ -8,10 +8,7 @@ import { shared } from '@constants';
 
 import classes from './navbar.module.scss';
 
-type NavbarProps = {
-  isMobile?: boolean;
-};
-const Navbar = ({ isMobile }: NavbarProps) => {
+const Navbar = () => {
   const largeDevices = useMediaQuery('(min-width:760px)');
 
   const firstname = Cookies.get('firstname');
@@ -21,7 +18,7 @@ const Navbar = ({ isMobile }: NavbarProps) => {
     <div className={classes.wrapper}>
       <LogoIcon />
 
-      {largeDevices && !isMobile && (
+      {largeDevices && (
         <Typography variant="title_large_medium">{shared.title}</Typography>
       )}
 
