@@ -6,18 +6,16 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { buttonStyles } from './button.styles';
 
 interface CustomButtonProps extends Omit<ButtonProps, 'variant' | 'size'> {
-  isLoading?: boolean;
-  size?: 'small' | 'medium' | 'large' | 'xlarge';
-  variant?: 'contained' | 'text' | 'outlined' | 'ghost';
+  size?: 'medium' | 'large';
+  variant?: 'contained' | 'outlined';
 }
 
 export const Button = ({
   children,
-  isLoading = false,
   disabled,
   color = 'primary',
   variant = 'contained',
-  size = 'xlarge',
+  size = 'medium',
   sx,
   ...rest
 }: CustomButtonProps) => {
@@ -29,12 +27,10 @@ export const Button = ({
       }}
       variant={variant}
       color={color}
-      disabled={isLoading || disabled}
-      // onClick={action('button clicked')}
       size={size}
       {...rest}
     >
-      {isLoading ? <CircularProgress color="inherit" /> : children}
+      {children}
     </MuiButton>
   );
 };

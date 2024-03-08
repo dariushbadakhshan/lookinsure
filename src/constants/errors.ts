@@ -11,3 +11,23 @@ export const registerFormٍErrorText = {
   wrongPassword:
     'رمز عبور باید شامل حداقل یک حروف بزرگ و یک حروف کوچک، و حداقل ۴ و حداکثر 10 کاراکتر باشد.',
 };
+
+export const carFormErrorText = {
+  carType: 'لطفا نوع خودروی خود را انتخاب کنید.',
+  carModel: 'لطفا مدل خودروی خود را انتخاب کنید.',
+};
+
+export const PrevInsureFormErrorText = {
+  prevInsurance: 'لطفا شرکت بیمه گر قبلی خود را انتخاب کنید.',
+};
+
+export const insuranceSelectFormErrorText = {
+  thirdParty: 'لطفا درصد تخفیف بیمه شخص ثالث خود را انتخاب کنید.',
+  driverAccident: 'لطفا درصد تخفیف بیمه حوادث راننده خود را انتخاب کنید.',
+};
+
+export const fetchErrors = {
+  default: 'مشکلی پبش آمده است!',
+  serverError: 'در حال حاضر سرور قادر به پاسخگویی نیست.',
+  notFoundError: 'سرویس مورد نظر یافت نشد!',
+};

@@ -1,8 +1,17 @@
 .form {
-  width: 300px;
   height: max-content;
-  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+
+  .name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .submit {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

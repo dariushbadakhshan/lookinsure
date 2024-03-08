@@ -1,3 +1,5 @@
+import { InsuranceContainer } from '@containers';
+
 export default function Insurance() {
-  return <div></div>;
+  return <InsuranceContainer />;
 }

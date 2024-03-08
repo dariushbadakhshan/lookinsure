@@ -12,7 +12,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { prefixer } from 'stylis';
 import rtlPlugin from 'stylis-plugin-rtl';
 
-import { lightTheme, lightThemePalette } from '@shared';
+import { lightTheme, themePalette } from '@shared';
 import { typography } from '@shared';
 import { fontsHelper } from '@helpers';
 
@@ -22,7 +22,7 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        ...lightThemePalette,
+        ...themePalette,
       },
     },
   },

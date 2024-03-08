@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   const userAgent = headersList.get('user-agent');
 
-  const isMobile = userAgent!.match(/iPhone|iPad|iPod/i);
+  const isMobile = userAgent!.match(/iPhone|iPad|iPod|Android/i);
 
   return <MainLayout isMobile={!!isMobile}>{children}</MainLayout>;
 }

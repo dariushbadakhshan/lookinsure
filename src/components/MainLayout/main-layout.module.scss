@@ -1,20 +1,33 @@
 .mainLayout {
   width: 100svw;
-  background-color: var(--sushi-palette-surface_main_background);
+  background-color: var(--lookinsure-palette-surface_main_background);
   height: 100svh;
-  // margin: 0 auto;
-  // position: relative;
-  // overflow: hidden;
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: auto 1fr 80px;
-  // gap: 0px 0px;
-  // grid-template-areas:
-  //   'header'
-  //   'content'
-  //   'bottomNavigation';
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    width: max-content;
+    min-width: 600px;
+    padding: 16px 120px 16px 16px;
+    z-index: 10;
+  }
+
+  .carImage {
+    height: 420px;
+    width: 760px;
+    padding: 60px 40px;
+    flex: 1;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 
   .mobileMainLayout {
+    background-color: brown;
   }
 
   // @media only screen and (min-width: 768px) {
