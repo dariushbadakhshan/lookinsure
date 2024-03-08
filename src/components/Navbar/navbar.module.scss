@@ -10,4 +10,11 @@
     align-items: center;
     gap: 8px;
   }
+
+  @media (max-width: 760px) {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
 }

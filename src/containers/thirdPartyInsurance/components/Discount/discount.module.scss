@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 20px;
 
+  @media (max-width: 760px) {
+    width: 100dvw;
+    padding: 20px;
+  }
+
   .form {
     display: flex;
     flex-direction: column;
