@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+  @media (max-width: 760px) {
+    width: 100svw;
+    min-height: 350px;
+    padding-top: 20px;
+    align-items: center;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 760px) {
+      width: 100svw;
+      padding: 0 20px;
+      gap: 20px;
+      align-items: center;
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+  .lastStep {
+    justify-content: flex-end;
+
+    @media (max-width: 760px) {
+      justify-content: center;
+    }
+  }
+}
