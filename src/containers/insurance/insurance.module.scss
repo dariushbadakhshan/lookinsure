@@ -3,10 +3,23 @@
   flex-direction: column;
   gap: 36px;
 
+  @media (max-width: 760px) {
+    width: 100svw;
+    height: 350px;
+    padding-top: 20px;
+    align-items: center;
+  }
+
   .links {
     display: flex;
     align-items: center;
     gap: 24px;
+
+    @media (max-width: 760px) {
+      width: 100%;
+      height: 320px;
+      justify-content: center;
+    }
 
     .imageItem {
       display: flex;
@@ -20,14 +33,6 @@
       width: 110px;
       height: 110px;
       object-fit: cover;
-
-      svg {
-        fill: red;
-      }
-
-      & .disabled {
-        cursor: none;
-      }
     }
   }
 }

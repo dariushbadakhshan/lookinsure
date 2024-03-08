@@ -7,4 +7,9 @@
   border-radius: 16px;
   padding: 16px;
   gap: 16px;
+
+  @media (max-width: 760px) {
+    width: 90dvw;
+    padding: 20px;
+  }
 }

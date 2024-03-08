@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { insuranceTypeSelect, routes } from '@constants';
-
 import { Typography } from '@ui';
 import { colorPalette } from '@shared';
 
@@ -31,16 +30,13 @@ const InsurancePage = () => {
           </Typography>
         </Link>
 
-        <Link
-          className={`${classes.imageItem} ${classes.disabled}`}
-          aria-disabled
-          href=""
-        >
+        <div className={`${classes.imageItem}`}>
           <Image
             src={'/images/svg/insurance-min.svg'}
             alt="body-insure"
             width={60}
             height={60}
+            style={{ opacity: '30%' }}
           />
 
           <Typography
@@ -49,7 +45,7 @@ const InsurancePage = () => {
           >
             {insuranceTypeSelect.carAccident}
           </Typography>
-        </Link>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 'use client';
 import { createTheme } from '@mui/material';
 
-const theme = createTheme();
+export const theme = createTheme();
 // typography titles are contractions from: Name + Size + Weight : lmr=label+large+regular
 export const typography = {
   fontFamily: 'IRANSans',
