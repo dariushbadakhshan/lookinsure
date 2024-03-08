@@ -14,23 +14,22 @@ const Navbar = dynamic(
 
 type MainLayoutProps = {
   children: ReactNode;
-  isMobile?: boolean;
 };
 
-const MainLayout = ({ children, isMobile }: MainLayoutProps) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   const largeDevices = useMediaQuery('(min-width:760px)');
 
   return (
     <div id="mainLayout" className={`${classes.mainLayout}`}>
-      {<Navbar isMobile={isMobile} />}
+      {<Navbar />}
       <div className={classes.content}>{children}</div>
 
       <div className={classes.carImage}>
         <Image
           src="/images/svg/car-green-min.svg"
           alt="car-image"
-          height={largeDevices && !isMobile ? 300 : 150}
-          width={largeDevices && !isMobile ? 680 : 300}
+          height={largeDevices ? 300 : 150}
+          width={largeDevices ? 680 : 300}
         />
       </div>
     </div>
