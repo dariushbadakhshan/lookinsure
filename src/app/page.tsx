@@ -2,9 +2,9 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 const HomePage = () => {
-  const accessToken = cookies().get('username')?.value;
+  const username = cookies().get('firstname')?.value;
 
-  if (accessToken) {
+  if (username) {
     redirect('/insurance');
   } else {
     redirect('/auth/register');

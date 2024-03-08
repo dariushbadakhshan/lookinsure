@@ -19,27 +19,6 @@ export const typography = {
     lineHeight: '24px',
   },
 
-  // tsm
-  title_small_medium: {
-    fontSize: '14px',
-    fontWeight: 500,
-    lineHeight: '21px',
-  },
-
-  //llr
-  label_large_regular: {
-    fontSize: '16px',
-    fontWeight: 400,
-    lineHeight: '24px',
-  },
-
-  // llm
-  label_large_medium: {
-    fontSize: '16px',
-    fontWeight: 500,
-    lineHeight: '24px',
-  },
-
   // lmr
   label_medium_regular: {
     fontSize: '14px',
@@ -61,20 +40,6 @@ export const typography = {
     lineHeight: '18px',
   },
 
-  // lsm
-  label_small_medium: {
-    fontSize: '12px',
-    fontWeight: 500,
-    lineHeight: '18px',
-  },
-
-  // lxsm
-  label_x_small_regular: {
-    fontSize: '10px',
-    fontWeight: 400,
-    lineHeight: '15px',
-  },
-
   // blr
   body_large_regular: {
     fontSize: '16px',
@@ -82,39 +47,11 @@ export const typography = {
     lineHeight: '24px',
   },
 
-  // blm
-  body_large_medium: {
-    fontSize: '16px',
-    fontWeight: 500,
-    lineHeight: '24px',
-  },
-
-  // blrl
-  body_large_regular_long: {
-    fontSize: '16px',
-    fontWeight: 400,
-    lineHeight: '30px',
-  },
-
   // bmr
   body_medium_regular: {
     fontSize: '14px',
     fontWeight: 400,
     lineHeight: '21px',
-  },
-
-  // bmm
-  body_medium_medium: {
-    fontSize: '14px',
-    fontWeight: 500,
-    lineHeight: '21px',
-  },
-
-  // bmrp
-  body_medium_regular_paragraph: {
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: '24px',
   },
 
   // bsr
@@ -129,42 +66,6 @@ export const typography = {
     fontSize: '12px',
     fontWeight: 500,
     lineHeight: '18px',
-  },
-
-  // bsrp
-  body_small_regular_paragraph: {
-    fontSize: '12px',
-    fontWeight: 400,
-    lineHeight: '20px',
-  },
-
-  // bxsm
-  body_x_small_medium: {
-    fontSize: '10px',
-    fontWeight: 500,
-    lineHeight: '15px',
-  },
-
-  // bxsr
-  body_x_small_regular: {
-    fontSize: '10px',
-    fontWeight: 400,
-    lineHeight: '15px',
-  },
-
-  //hlr
-
-  headline_large_medium: {
-    fontSize: '32px',
-    fontWeight: 500,
-  },
-
-  //bsl
-
-  body_small_strikethrought: {
-    fontSize: '12px',
-    fontWeight: '400',
-    textDecoration: 'line-through !important',
   },
 
   h1: {

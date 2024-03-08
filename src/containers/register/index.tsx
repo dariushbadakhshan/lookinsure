@@ -14,7 +14,7 @@ import {
   passwordRegex,
   englishCharacterRegex,
 } from '@shared';
-import { Button } from '@ui';
+import { Button, Typography } from '@ui';
 
 import classes from './register.module.scss';
 
@@ -49,7 +49,7 @@ const initialFormData = {
 };
 
 const RegisterPage = () => {
-  const Router = useRouter();
+  const router = useRouter();
 
   const form = useForm<formFields>({
     resolver: zodResolver(formSchema),
@@ -57,33 +57,36 @@ const RegisterPage = () => {
   });
 
   const handleRegister = (formData: formFields) => {
-    Cookies.set('username', formData.firstname);
-    Router.push('/insurance');
+    Cookies.set('firstname', formData.firstname);
+    Cookies.set('lastname', formData.lastname);
+    Cookies.set('mobile', formData.mobile);
+
+    router.push('/insurance');
   };
 
   return (
     <div className={classes.form}>
-      <FormTextInput
-        name="firstname"
-        label={registerFormText.name}
-        isClearable={false}
-        inputSize="large"
-        control={form.control}
-        maxLength={20}
-      />
-      <FormTextInput
-        name="lastname"
-        label={registerFormText.lastname}
-        isClearable={false}
-        inputSize="large"
-        control={form.control}
-        maxLength={20}
-      />
+      <Typography variant="title_large_medium">{shared.signUp}</Typography>
+      <div className={classes.name}>
+        <FormTextInput
+          name="firstname"
+          label={registerFormText.name}
+          inputSize="medium"
+          control={form.control}
+          maxLength={20}
+        />
+        <FormTextInput
+          name="lastname"
+          label={registerFormText.lastname}
+          inputSize="medium"
+          control={form.control}
+          maxLength={20}
+        />
+      </div>
       <FormTextInput
         name="mobile"
         label={registerFormText.mobile}
-        isClearable={false}
-        inputSize="large"
+        inputSize="medium"
         type="number"
         control={form.control}
         maxLength={11}
@@ -92,15 +95,15 @@ const RegisterPage = () => {
       <FormTextInput
         name="password"
         label={registerFormText.password}
-        isClearable={false}
-        inputSize="large"
+        inputSize="medium"
         control={form.control}
         maxLength={10}
+        preventPersian
       />
 
       <div className={classes.submit}>
         <Button
-          size="large"
+          size="medium"
           fullWidth
           onClick={form.handleSubmit(handleRegister)}
         >

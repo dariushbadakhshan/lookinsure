@@ -15,25 +15,31 @@ export const registerFormText = {
   password: 'رمز عبور',
 };
 
-const providerForm = {
+export const carForm = {
   title: 'نوع و مدل خودروی خود را انتخاب کنید. ',
   carType: 'نوع خودرو',
   carModel: 'مدل خودرو',
 };
 
-const prevInsurForm = {
+export const prevInsurForm = {
   title: 'شرکت بیمه گر قبلی خود را در این بخش وارد کنید.',
-  prev: 'شرکت بیمه گر قبلی',
+  prevInsurance: 'شرکت بیمه گر قبلی',
 };
 
-const discuntForm = {
+export const discuntForm = {
   title: 'درصد تحفیف بیمه شخص ثالث و حوادث راننده را وارد کنید.',
-  thirthPartyDiscunt: 'درصد تخفیف ثالث',
+  thirdPartyDiscunt: 'درصد تخفیف ثالث',
   carAccidentDiscunt: 'درصد تخفیف حوادث راننده',
 };
 
-const insuranceTypeSelect = {
+export const insuranceTypeSelect = {
   title: 'انتخاب بیمه',
-  thirthParty: 'شخص ثالث',
+  thirdParty: 'شخص ثالث',
   carAccident: 'بدنه',
+};
+
+export const insuranceSelectForm = {
+  title: 'درصد تخفیف بیمه شخص ثالث و حوادث راننده را وارد کنید.',
+  thirdParty: 'درصد تخفیف شخص ثالث',
+  driverAccident: 'درصد تخفیف حوادث راننده',
 };

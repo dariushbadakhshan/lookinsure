@@ -24,13 +24,12 @@ export default async function RootLayout({
         <link rel="shortcut icon" href="/images/svg/logo-min.svg" />
         <meta name="viewport" content="width=device-width, user-scalable=no" />
       </head>
-      <body className={fontsHelper.className}>
+      <body className={fontsHelper.className} suppressHydrationWarning={true}>
         <ThemeRegistry options={{ key: 'lookinsure' }}>
           <NextTopLoader
             shadow=""
             color={colorPalette.surface_main_brand}
             zIndex={1600}
-            showSpinner={false}
           />
           {children}
           <ToastContainer />

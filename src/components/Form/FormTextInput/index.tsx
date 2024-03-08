@@ -3,12 +3,15 @@
 import { Controller } from 'react-hook-form';
 
 import { CustomTextFieldProps, TextField } from '@ui';
+import { ReactNode } from 'react';
 
 type FormTextInputProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: any;
   name: string;
   fieldError?: string;
+  children?: ReactNode;
+  select?: boolean;
 } & CustomTextFieldProps;
 
 export default function FormTextInput({
@@ -16,6 +19,8 @@ export default function FormTextInput({
   name,
   defaultValue,
   fieldError,
+  children,
+  select,
   ...rest
 }: FormTextInputProps) {
   return (
@@ -34,7 +39,10 @@ export default function FormTextInput({
             value={value}
             onChange={onChange}
             onBlur={onBlur}
-          />
+            select={select}
+          >
+            {children}
+          </TextField>
         );
       }}
     />

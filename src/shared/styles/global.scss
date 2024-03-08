@@ -7,7 +7,7 @@ html {
 
 body {
   line-height: inherit;
-  background-color: var(--sushi-palette-surface_main_background);
+  background-color: var(--lookinsure-palette-surface_main_background);
   user-select: none;
 }
 
@@ -58,7 +58,7 @@ svg {
 
 .ol-viewport {
   border-radius: 24px 24px 0px 0px;
-  border: 1px solid var(--sushi-palette-border_conditional_disable_light);
+  border: 1px solid var(--lookinsure-palette-border_conditional_disable_light);
 }
 
 .Toastify__toast-container--bottom-center {
@@ -88,12 +88,12 @@ svg {
 
 input {
   &::placeholder {
-    color: var(--sushi-palette-content_main_tertiary) !important;
+    color: var(--lookinsure-palette-content_main_tertiary) !important;
     opacity: 1 !important; /* Firefox */
   }
 
   &::-ms-input-placeholder {
     /* Edge 12 -18 */
-    color: var(--sushi-palette-content_main_tertiary) !important;
+    color: var(--lookinsure-palette-content_main_tertiary) !important;
   }
 }

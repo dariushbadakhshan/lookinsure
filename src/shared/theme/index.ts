@@ -6,7 +6,7 @@ import { colorPalette } from '../colorPalette';
 import { typography } from '../typography';
 import React from 'react';
 
-export const lightThemePalette = {
+export const themePalette = {
   primary: {
     main: colorPalette.surface_main_brand,
     contrastText: colorPalette.surface_main,
@@ -17,18 +17,6 @@ export const lightThemePalette = {
   error: {
     main: colorPalette.surface_conditional_negative,
   },
-  text: {
-    // primary: colorPalette.textPrimary,
-    // secondary: colorPalette.lightLeaf,
-  },
-  // leaf: {
-  //   main: colorPalette.leaf,
-  //   contrastText: colorPalette.white,
-  // },
-  // zarin: {
-  //   main: colorPalette.zarin,
-  //   contrastText: "#fff",
-  // },
   sunset: {
     main: colorPalette.surface_main_brand,
     contrastText: '#fff',
@@ -40,7 +28,7 @@ export const lightTheme: ThemeOptions = createTheme({
   direction: 'rtl',
   palette: {
     mode: 'light',
-    ...lightThemePalette,
+    ...themePalette,
   },
   typography,
   components: {
@@ -72,62 +60,28 @@ declare module '@mui/material/styles' {
   }
 
   interface TypographyVariants {
-    tlm: React.CSSProperties;
-    tmm: React.CSSProperties;
-    tsm: React.CSSProperties;
-    llr: React.CSSProperties;
-    llm: React.CSSProperties;
-    lmr: React.CSSProperties;
-    lmm: React.CSSProperties;
-    lsb: React.CSSProperties;
-    lsm: React.CSSProperties;
-    lsr: React.CSSProperties;
-    blb: React.CSSProperties;
-    blm: React.CSSProperties;
-    blr: React.CSSProperties;
-    blrr: React.CSSProperties;
-    bmb: React.CSSProperties;
-    bmm: React.CSSProperties;
-    bmr: React.CSSProperties;
-    bmrr: React.CSSProperties;
-    bsb: React.CSSProperties;
-    bsm: React.CSSProperties;
-    bsr: React.CSSProperties;
-    bxsb: React.CSSProperties;
-    bxsm: React.CSSProperties;
-    bxsr: React.CSSProperties;
-    hlr: React.CSSProperties;
-    bsl: React.CSSProperties;
+    tlm?: React.CSSProperties;
+    tmm?: React.CSSProperties;
+    lmr?: React.CSSProperties;
+    lmm?: React.CSSProperties;
+    lsr?: React.CSSProperties;
+    blr?: React.CSSProperties;
+    bmr?: React.CSSProperties;
+    bsm?: React.CSSProperties;
+    bsr?: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     tlm?: React.CSSProperties;
     tmm?: React.CSSProperties;
-    tsm?: React.CSSProperties;
-    llr?: React.CSSProperties;
-    llm?: React.CSSProperties;
     lmr?: React.CSSProperties;
     lmm?: React.CSSProperties;
-    lsb?: React.CSSProperties;
-    lsm?: React.CSSProperties;
     lsr?: React.CSSProperties;
-    blb?: React.CSSProperties;
-    blm?: React.CSSProperties;
     blr?: React.CSSProperties;
-    blrr?: React.CSSProperties;
-    bmb?: React.CSSProperties;
-    bmm?: React.CSSProperties;
     bmr?: React.CSSProperties;
-    bmrr?: React.CSSProperties;
-    bsb?: React.CSSProperties;
     bsm?: React.CSSProperties;
     bsr?: React.CSSProperties;
-    bxsb?: React.CSSProperties;
-    bxsm?: React.CSSProperties;
-    bxsr?: React.CSSProperties;
-    hlr?: React.CSSProperties;
-    bsl?: React.CSSProperties;
   }
 }
 
@@ -150,31 +104,14 @@ declare module '@mui/material/Button' {
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
-    tlm: true;
-    tmm: true;
-    tsm: true;
-    llr: true;
-    llm: true;
-    lmr: true;
-    lmm: true;
-    lsb: true;
-    lsm: true;
-    lsr: true;
-    blb: true;
-    blm: true;
-    blr: true;
-    blrr: true;
-    bmb: true;
-    bmm: true;
-    bmr: true;
-    bmrr: true;
-    bsb: true;
-    bsm: true;
-    bsr: true;
-    bxsb: true;
-    bxsm: true;
-    bxsr: true;
-    hlr: true;
-    bsl: true;
+    tlm?: true;
+    tmm?: true;
+    lmr?: true;
+    lmm?: true;
+    lsr?: true;
+    blr?: true;
+    bmr?: true;
+    bsm?: true;
+    bsr?: true;
   }
 }

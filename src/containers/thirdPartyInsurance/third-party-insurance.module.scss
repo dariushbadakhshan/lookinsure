@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .lastStep {
+    justify-content: flex-end;
+  }
+}
